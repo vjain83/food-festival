@@ -1,19 +1,19 @@
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const path = require("path");
 const webpack = require("webpack");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 
 module.exports = {
     entry:
     {
         app: './assets/js/script.js',
-        event: './assets/js/event.js',
+        event: './assets/js/events.js',
         schedule: './assets/js/schedule.js',
-        ticket: './assets/js/ticket'
+        ticket: './assets/js/ticket.js'
     },
     output: {
+        filename: "[name].bundle.js",
         path: __dirname + "/dist",
-        filename: '[name].bundle.js'
     },
     module: {
         rules: [
